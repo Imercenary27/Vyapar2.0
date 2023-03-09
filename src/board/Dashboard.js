@@ -19,8 +19,7 @@ export default function Dashboard(props) {
 
   const nextMovePlayerDetails = players.filter(player=>player)
     const renderPlayerCrad = (player,index)=>{
-      localStorage.setItem(player.userId,  player.currentPlace)
-      return(
+        return(
         <Card
         className="text-bg-info text-center"
         style={{ width: "120px", height: "120px" }}
@@ -30,7 +29,7 @@ export default function Dashboard(props) {
           Player {player.playSequence}: {player.userId}
           <br />
           
-          Wallet Balance: {player.walletBalance}<img src={Mudra} alt="" width="5" height="5" />
+          Wallet Balance: {player.walletBalance}
           <br />
           Current Place: {player.currentPlace}
         </p>

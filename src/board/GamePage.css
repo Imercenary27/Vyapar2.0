@@ -1,3 +1,7 @@
+.mainfunctions{
+  background-color: #fcfcfc;
+  border: 1px solid #000000;
+}
 .action img{
     --s: 50px;   /* the size of the image */
     --b: 8px;     /* the border thickness*/
@@ -16,6 +20,34 @@
     justify-content: space-between;
     box-shadow: 90px 100px 90px -20px rgba(12, 1, 1, 0.2);
 }
+.sellLocationlist{
+  background-color: #4ECDC4;
+  font-size: 9px;
+  position: fixed;
+  right: 10px;
+  width: 380px;
+  height: 100px;
+  overflow-y: scroll;
+}
+.sellLocationlist Button{
+  font-size: 9px;
+
+}
+.bidLocationlist{
+  font-size: 9px;
+  background-color: #4ECDC4;
+  position: fixed;
+  top: 160px;
+  width: 380px;
+  right: 10px;
+  height: 100px;
+  overflow-y: scroll;
+}
+.bidLocationlist Button{
+  font-size: 9px;
+
+}
+
 .action img:hover {
     outline: var(--b) solid var(--c);
     outline-offset: var(--g);
@@ -54,7 +86,7 @@
   
    
     position: relative;
-    right: -950px;
+    right: -980px;
     top:-600px;
     
  
@@ -62,8 +94,9 @@
 .containergame{
     width: 100%;
     height: 950px;
-    min-height: 150vh;
-    background-image:linear-gradient(79deg,#653cc6,#C66FBC 48%,#f7944d);
+    min-height: 100vh;
+    background-image:url(../images/backdroptry.jpg);
+    background-attachment: fixed;
     }
 
     .Dashboarddiv{
@@ -85,8 +118,9 @@
     .boarddiv{
       width: 60%;
       float: left;
-      position: relative;
-      left: 70px;
+      position: fixed;
+      left: 370px;
+      top: 30px;
     }
     .actiondiv{
       width: 20%;
@@ -103,6 +137,8 @@
   border: 3px solid black;
   background-color: #bfcccb;
   overflow: hidden;
+  position: fixed;
+  
 
 
 }
@@ -120,6 +156,7 @@
   width:20%;
   float:left;
   height: 900px;
+  box-shadow: #000000;
 
 }
 .watch{
@@ -140,6 +177,7 @@
   width:20%;
   float: right;
   height: 800px;
+  
 }
 
 /* for Firefox */
@@ -227,9 +265,10 @@
   display: flex;
   flex-direction: column;
   justify-content:space-between;
-  position: relative;
-  top: 150px;
+  position: fixed;
+  top: 500px;
   right:0px;
+  
   height: 50px;
   width: 300px;
   padding: 20px;
@@ -274,7 +313,7 @@
     0px 0px 0.5em 0px var(--glow-color);
   box-shadow: inset 0px 0px 0.5em 0px var(--glow-color),
     0px 0px 0.5em 0px var(--glow-color);
-  animation: border-flicker 2s linear infinite;
+  
 }
 
 .glowing-txt {
@@ -442,3 +481,22 @@
     opacity: 1;
   }
 }
+.playerslist{
+  position: fixed;
+  background-color: #e8d7f4;
+  height: 150px;
+  box-shadow: var(--outer-shadow);
+  border-radius: 10px;
+  width: 290px;
+  top: 270px;
+  text-align: center;
+  overflow-y: scroll;
+  left: 40px;
+  border: 9px solid #7a68ac;
+
+}
+.playerslist button{
+  width: 200px;
+  background-color: rgb(240, 240, 163);
+}
+

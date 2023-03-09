@@ -15,23 +15,10 @@ export default function CurrentPlayer(props) {
     if(loggedInPlayer.length >0){
      return(<>
      <div className="ajunek">
-      <div className="playercard" style={{ height: "320px", width: "200px" }}>
-      <img
-        src={yourdetails}
-        alt="BigCo Inc. logo"
-        style={{
-          height: "100px",
-          width: "150px",
-          position: "relative",
-          left: "10px",
-          top:"5px"
-        }}
-      />
-      <br />
-      
-      <h4>Player: {loggedInPlayer[0].userId} </h4><br/>
-      Wallet Balance: {loggedInPlayer[0].walletBalance} <br/> 
-      Current Place: {loggedInPlayer[0].currentPlace} <br/>
+      <div className="playercardyourdetails" style={{ height: "150px", width: "150px" }}>
+      <h4> {loggedInPlayer[0].userId} </h4>
+      Wallet Balance: <h5>{loggedInPlayer[0].walletBalance}</h5>  
+      Current Place:<h5>{loggedInPlayer[0].currentPlace} </h5> 
       Assets:
       {OwnedAssets.map(place=><h5 key={place.placeSequence}>{place.placeName}</h5>)}
      

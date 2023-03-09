@@ -2,13 +2,13 @@
   display: inline-block;
   justify-items: center;
   border-color: black;
-
   width: 80px;
   transition: all 0.3s;
-  background-color: antiquewhite;
+  background-color: #bde2c1 !important;
   height: 100px;
+  
+  box-shadow: rgb(102, 107, 252) 0px 0px 0px 3px, rgb(31, 193, 27) 0px 0px 0px 6px, rgb(19, 16, 1) 0px 0px 0px 9px;
 }
-
 .card:hover{
   transform: scale(1.80);
   z-index: 2;
@@ -27,11 +27,10 @@ position: relative;
   font-weight: 500;
   place-content: center;
   top: -160px;
-  width: 850px;
+  width: 900px;
   right: 40px;
-  height: 950px;
-  background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgb(42, 17, 112) 100%);
-  border:9px red ;
+  height: 990px;
+  background: #bde2c1;
   border-radius: 9px;
   display: grid;
   align-items: center;
@@ -40,28 +39,26 @@ position: relative;
   grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
   grid-auto-flow: row;
   grid-template-areas:
-    "start mumbai agra motorboat ahmedabad shoppingmall shimla transaction delhi jail"
-    "amrutsar . . . . . . . . jaipur"
-    "luck2 . . . . . . . . luck1"
-    "kanpur . . . . . . . . banglore"
-    "income-tax . . . . . . . . hydrabad"
-    "chennai . . . . . . . . air-india"
-    "shrinagar . . . . . . . . electric-company"
-    "kolkata . . . . . . . . goa"
-    "bus . . . . . . . . patna"
-    "club indore darjiling railway water-tax incometax chandigarh cochin transaction1 centralpark1fr";
+  "start mumbai agra motorboat ahmedabad shoppingmall shimla transaction delhi jail"
+  "amrutsar chance chance chance . . chance1 chance1 chance1 jaipur"
+  "luck2 chance chance chance . . chance1 chance1 chance1 luck1"
+  "kanpur chance chance chance . . chance1 chance1 chance1 banglore"
+  "income-tax . heading heading heading heading heading heading . hydrabad"
+  "chennai . heading heading heading heading heading heading . air-india"
+  "shrinagar chance2 chance2 chance2 . . chance3 chance3 chance3 electric-company"
+  "kolkata chance2 chance2 chance2 . . chance3 chance3 chance3 goa"
+  "bus chance2 chance2 chance2 . . chance3 chance3 chance3 patna"
+  "club indore darjiling railway water-tax incometax chandigarh cochin transaction1 centralpark1fr";
+  
     transform:
   perspective(2000px)
   translate3d(0px, 0px, -350px)
   rotateX(27deg)
   scale(0.9, 0.9);
 border-radius: 20px;
-border: 10px solid #4c33c8;
 box-shadow: 90px 100px 90px -20px rgba(12, 1, 1, 0.2);
 transition: 0.4s ease-in-out transform;
 
-  
-  
   }
 /*
   .containerboard:hover{
@@ -70,6 +67,9 @@ transition: 0.4s ease-in-out transform;
   
   }
   */
+
+  
+
 
 @keyframes example {
   from {transform: rotate3D(1,0,0,70deg) rotate3D(0,0,1,0deg);}
@@ -108,7 +108,11 @@ transition: 0.4s ease-in-out transform;
 }
 
 .mumbai h6 {
-  background-color: rgb(237, 138, 155);
+  background-color: rgb(238, 74, 101);
+  height: 19px;
+  width: 80px;
+  font-size: 15px;
+  font-weight: bold;
 }
 
 
@@ -116,6 +120,10 @@ transition: 0.4s ease-in-out transform;
   grid-area: agra;
 }
 .agra h6 {
+  height: 19px;
+  width: 80px;
+  font-size: 15px;
+  font-weight: bold;
   background-color: hsl(198, 71%, 62%);
 }
 
@@ -123,6 +131,10 @@ transition: 0.4s ease-in-out transform;
   grid-area: motorboat;
 }
 .motorboat h6 {
+  height: 19px;
+  width: 80px;
+  font-size: 15px;
+  font-weight: bold;
   background-color: rgb(155, 80, 80);
 }
 .ahmedabad {
@@ -130,6 +142,10 @@ transition: 0.4s ease-in-out transform;
 
 }
 .ahmedabad h6 {
+  height: 19px;
+  width: 80px;
+  font-size: 15px;
+  font-weight: bold;
   background-color: rgb(237, 138, 155);
 }
 
@@ -138,6 +154,10 @@ transition: 0.4s ease-in-out transform;
 
 }
 .shimla h6 {
+  height: 19px;
+  width: 80px;
+  font-size: 15px;
+  font-weight: bold;
   background-color: yellow
 }
 
@@ -150,6 +170,10 @@ transition: 0.4s ease-in-out transform;
 
 }
 .delhi h6 {
+  height: 19px;
+  width: 80px;
+  font-size: 15px;
+  font-weight: bold;
   background-color: rgb(55, 142, 55)
 }
 
@@ -164,6 +188,10 @@ transition: 0.4s ease-in-out transform;
 
 }
 .jaipur h6 {
+  height: 19px;
+  width: 80px;
+  font-size: 15px;
+  font-weight: bold;
   background-color: rgb(237, 138, 155);
 }
 
@@ -176,7 +204,11 @@ transition: 0.4s ease-in-out transform;
 
 }
 .banglore h6 {
-  background-color: yellow
+  background-color: yellow;
+  height: 19px;
+  width: 80px;
+  font-size: 15px;
+  font-weight: bold;
 }
 
 .hydrabad {
@@ -200,6 +232,10 @@ transition: 0.4s ease-in-out transform;
   grid-area: electric-company;
 }
 .electric-company h6 {
+  height: 19px;
+  width: 80px;
+  font-size: 10px;
+  font-weight: bold;
   background-color: rgb(155, 80, 80);
 }
 
@@ -208,6 +244,10 @@ transition: 0.4s ease-in-out transform;
 
 }
 .goa h6 {
+  height: 19px;
+  width: 80px;
+  font-size: 15px;
+  font-weight: bold;
   background-color: rgb(55, 142, 55)
 }
 
@@ -218,6 +258,10 @@ transition: 0.4s ease-in-out transform;
 
 }
 .patna h6 {
+  height: 19px;
+  width: 80px;
+  font-size: 15px;
+  font-weight: bold;
   background-color: hsl(198, 71%, 62%);
 }
 
@@ -234,6 +278,10 @@ transition: 0.4s ease-in-out transform;
 
 }
 .cochin h6 {
+  height: 19px;
+  width: 80px;
+  font-size: 15px;
+  font-weight: bold;
   background-color: rgb(55, 142, 55)
 }
 
@@ -241,6 +289,10 @@ transition: 0.4s ease-in-out transform;
   grid-area: chandigarh;
 }
 .chandigarh h6 {
+  height: 19px;
+  width: 80px;
+  font-size: 15px;
+  font-weight: bold;
   background-color: rgb(55, 142, 55)
 }
 
@@ -252,6 +304,10 @@ transition: 0.4s ease-in-out transform;
   grid-area: water-tax;
 }
 .water-tax h6 {
+  height: 19px;
+  width: 80px;
+  font-size: 15px;
+  font-weight: bold;
   background-color: rgb(155, 80, 80);
 }
 
@@ -259,6 +315,10 @@ transition: 0.4s ease-in-out transform;
   grid-area: railway;
 }
 .railway h6 {
+  height: 19px;
+  width: 80px;
+  font-size: 15px;
+  font-weight: bold;
   background-color: rgb(155, 80, 80);
 }
 
@@ -266,6 +326,10 @@ transition: 0.4s ease-in-out transform;
   grid-area: darjiling;
 }
 .darjiling h6 {
+  height: 19px;
+  width: 80px;
+  font-size: 15px;
+  font-weight: bold;
   background-color: rgb(237, 138, 155);
 }
 
@@ -273,6 +337,10 @@ transition: 0.4s ease-in-out transform;
   grid-area: indore;
 }
 .indore h6 {
+  height: 19px;
+  width: 80px;
+  font-size: 15px;
+  font-weight: bold;
   background-color: hsl(198, 71%, 62%);
 }
 
@@ -285,6 +353,10 @@ transition: 0.4s ease-in-out transform;
   grid-area: bus;
 }
 .bus h6 {
+  height: 19px;
+  width: 80px;
+  font-size: 15px;
+  font-weight: bold;
   background-color: rgb(155, 80, 80);
 }
 
@@ -292,6 +364,10 @@ transition: 0.4s ease-in-out transform;
   grid-area: kolkata;
 }
 .kolkata h6 {
+  height: 19px;
+  width: 80px;
+  font-size: 15px;
+  font-weight: bold;
   background-color: rgb(237, 138, 155);
 }
 
@@ -299,14 +375,22 @@ transition: 0.4s ease-in-out transform;
   grid-area: shrinagar;
 }
 .shrinagar h6 {
-  background-color: yellow
+  background-color: yellow;
+  height: 19px;
+  width: 80px;
+  font-size: 15px;
+  font-weight: bold;
 }
 
 .chennai {
   grid-area: chennai;
 }
 .chennai h6 {
-  background-color: yellow
+  background-color: yellow;
+  height: 19px;
+  width: 80px;
+  font-size: 15px;
+  font-weight: bold;
 }
 
 .income-tax {
@@ -318,18 +402,34 @@ transition: 0.4s ease-in-out transform;
 }
 .kanpur h6 {
   background-color: hsl(198, 71%, 62%);
+  height: 19px;
+  width: 80px;
+  font-size: 15px;
+  font-weight: bold;
 }
 
 .luck2 {
   grid-area: luck2;
 }
-
+.luck2 h6 {
+  background-color: white;
+  height: 19px;
+  width: 80px;
+  font-size: 15px;
+  font-weight: bold;
+  
+  
+}
 .amrutsar {
   grid-area: amrutsar;
   
 }
 .amrutsar h6 {
-  background-color: yellow
+  background-color: yellow;
+  height: 19px;
+  width: 80px;
+  font-size: 15px;
+  font-weight: bold;
   
   
 }
@@ -339,7 +439,11 @@ transition: 0.4s ease-in-out transform;
   grid-area: shoppingmall;
 }
 .shoppingmall h6 {
-  background-color: rgb(55, 142, 55)
+  background-color: rgb(55, 142, 55);
+  height: 19px;
+  width: 80px;
+  font-size: 15px;
+  font-weight: bold;
 }
 /*
 .Boardsarkawa{
@@ -353,7 +457,25 @@ transition: 0.4s ease-in-out transform;
   text-align: center;
   color:white;
   scale: 1.2;
+  z-index: 2;
+  animation: leaves 1s ease-in-out infinite alternate;
+  -webkit-animation: leaves 1s ease-in-out infinite alternate;
 }
+
+@keyframes leaves {
+  0% {
+      transform: scale(1.0);
+      -webkit-transform: scale(1.0);
+  }
+  100% {
+      transform: scale(2.0);
+      -webkit-transform: scale(2.0);
+  }
+}
+
+
+
+
 
 .List{
   text-align: center;
@@ -367,25 +489,108 @@ transition: 0.4s ease-in-out transform;
 
 .positioncard{
   position: fixed;
-  top:100px;
-  left: 50px;
-  
- 
+  top:85px;
+  left: 40px;
+  border: 5px black ;
   display: inline-block;
   justify-items: center;
-  border-color: black;
-  width: 200px;
+  width: 120px;
   transition: all 0.3s;
   background-color: antiquewhite;
-  height: 200px;
-  border-radius: 10px;
+  height: 150px;
+  font-size:15px;
+  border: 12px ;
+  border-color: black;
+  box-shadow: var(--outer-shadow);
+border-radius: 7px;
 }
 
 
 
 .positioncard h6{
   text-align: center;
+  background-color: #4c33c8;
+  color: white;
+
+}
+.positioncard h5{
+  text-align: center;
+
 }
 .positioncard p{
   text-size-adjust: 9px;
+  font-size: 10px;
+}
+.positioncard List{
+  font-size:10px
+}
+
+.chance {
+  grid-area: chance; 
+  position: relative;
+  border-radius: 20px;
+  top: 40px;
+  left: 20px;
+  height: 170px;
+  transform:rotate(-45deg) ;
+  text-align: center;
+  background-color: #7a68ac;
+  background-color: #D9AFD9;
+background-image: linear-gradient(0deg, #D9AFD9 0%, #97D9E1 100%);
+
+}
+
+.chance1 {
+ grid-area: chance1; 
+ position: relative;
+ top: 40px;
+ border-radius: 20px;
+ height: 170px;
+ transform:rotate(45deg) ;
+text-align: center;
+ right: 10px;
+ 
+ background-color: #8EC5FC;
+ background-image: linear-gradient(62deg, #8EC5FC 0%, #E0C3FC 100%);
+ }
+
+.chance2 {
+ grid-area: chance2; 
+ position: relative;
+ bottom: 30px;
+ border-radius: 20px;
+ height: 170px;
+ left: 20px;
+ transform:rotate(45deg) ;
+ text-align: center;
+ background-color: #8EC5FC;
+ background-image: linear-gradient(62deg, #8EC5FC 0%, #E0C3FC 100%);
+ }
+
+.chance3 {
+ grid-area: chance3; 
+ position: relative;
+ border-radius: 20px;
+ height: 170px;
+ transform:rotate(-45deg) ;
+ bottom: 30px;
+ right: 20px;
+ text-align: center;
+ 
+ background-color: #D9AFD9;
+background-image: linear-gradient(0deg, #D9AFD9 0%, #97D9E1 100%);
+
+}
+.heading{
+grid-area: heading; 
+height: 100px;
+align-items: center;
+text-align: center;
+font-size: 120px;
+justify-items: center;
+background-image: url(../images/midboardback.jpg);
+
+background-size: 100%;
+border-radius: 15px;
+
 }

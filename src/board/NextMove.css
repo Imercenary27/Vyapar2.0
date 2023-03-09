@@ -1,7 +1,7 @@
 :root {
     --outer-shadow: 
-      0 0 0.1vw 0.4vw #23e5ff,
-      0 0 0.4vw 0.6vw #1298a7,
+      0 0 0.1vw 0.4vw #e0f7fa,
+      0 0 0.4vw 0.6vw #00e5ff,
       0 0 1vw 0.4vw #26c6da;
     --inner-shadow:
       inset 0 0 0.1vw 0.4vw #e0f7fa,
@@ -15,43 +15,50 @@
       inset 0 0 0.4vw 0.6vw #00e5ff,
       inset 0 0 1vw 0.4vw #26c6da;
   }
-  .ajunek{
+  .ajunektikade{
     position: relative;
-    top: 100px;
+    top: 390px;
+    height: 100px;
     }
-.playercardyourdetails{
+   
+.playercard{
+    box-shadow: var(--outer-shadow);
     display: inline-block;
     justify-items: center;
-    
-    
-    box-shadow: var(--outer-shadow);
-    border: 12px ;
     border-color: black;
-  border-radius: 7px;
-    background-color: rgb(241, 196, 196);
-    height: 92px;
+    border-radius: 7px;
+    width: 270px;
+    border: 6px solid #7a68ac;
+    transition: all 0.3s;
+    background-color: rgb(232, 215, 244);
+    height: 90px;
     position: fixed;
+    top: 450px;
     margin-bottom: -10px;
-    top:85px;
-    left: 180px;
-    overflow-y: scroll;
-      
+    left: 40px;
+      transition: 0.5s;
+      overflow-y: scroll;
+
   }
-  .playercardyourdetails:hover{
+  .playercard:hover{
     transform: scale(1);
     z-index: 2;
   }
-  .playercardyourdetails h6{
+  .playercard h6{
     text-align: center;
     position: relative;
+    top: -25px;
     border-radius: 5px;
   }
-  .playercardyourdetails p{
+  .playercard h3{
+    background-color: #7a68ac;
+    text-align: center;
+  }
+  .playercard p{
     text-size-adjust: 5px;
     position: relative;
-
+    top: -25px;
   }
- 
   
 .ajunek{
     position: relative;

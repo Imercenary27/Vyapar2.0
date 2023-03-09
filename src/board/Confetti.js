@@ -7,6 +7,10 @@ export function Confetti() {
   const[windowDimension, setDimension] = useState({width:window.innerWidth, height:window.innerHeight});
   const[Btn, setBtn] = useState(false);
   const [realwinner,setWinner]=('')
+
+  useEffect(() => {
+    setBtn(!Btn)
+  },[])
   
   const detectSize = () => {
     setDimension({width: window.innerWidth, height:window.innerHeight});
@@ -34,6 +38,7 @@ export function Confetti() {
 
     <NavbarAft/>
 <div className="App">
+<div className='declarewin'> Winner for the Game is: {localStorage.getItem('winner')}</div><br/>
     <button className='end' onClick={()=>{setBtn(!Btn)}}>End game</button>
       {Btn && <ReactConfetti
         width={windowDimension.width}
@@ -43,7 +48,7 @@ export function Confetti() {
       
       
       }
-        <div>{localStorage.getItem('winner')}</div> </div>
+       </div>
     </>
   );
 };

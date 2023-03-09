@@ -15,13 +15,13 @@ const NavbarBef = () => {
     const logout = async () => {
         localStorage.clear();
 //issue here
-       navigate('./login')
+       navigate("/login")
 
 
         
     }
   return (
-    <header className="p-3 bg-dark text-white">
+    <header className="p-3  text-white"style={{backgroundColor:"#151B40" }}>
     <div className="container">
         <div className="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
         <h2><FaIcons.FaUser></FaIcons.FaUser></h2>

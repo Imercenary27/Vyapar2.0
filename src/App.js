@@ -5,7 +5,7 @@ import {Register} from "./components/Register";
 import {Home} from "./components/Home";
 import {GamePlay} from "./components/CreateGame";
 import {Aboutonly} from "./aboutsettings/aboutonly";
-import {Gameinplay} from "./components/WalletCreate";
+
 import {Contact} from "./components/Contact";
 
 import {Confetti} from "./board/Confetti";
@@ -25,6 +25,9 @@ import NavbarAft from './NavbarAft';
 import JoinGameUsingId from './components/JoinGameUsingId';
 import Aboutsetting from './aboutsettings/aboutsetting';
 import Ledger  from './board/Ledger';
+import Todo from './board/Todo';
+import FirebaseFetch from './board/FirebaseFetch';
+
 
 
 function App() {
@@ -43,7 +46,7 @@ function App() {
             <Route path="/whattodo" element={<DeciderPage/>}/>
             <Route path="/gameend" element={<Confetti/>}/>
             <Route path='/gamelist' element={<Gamelist/>}/>
-            <Route path="/wallet" element={<Gameinplay/>}/>
+            
             <Route path="/game-board" element={<GamePage33/>}/>
             <Route path="/login" element={<Login/>}/>
             <Route path="/register" element={<Register/>}/>
@@ -56,6 +59,9 @@ function App() {
             <Route path="/settings" element={<Aboutsetting/>}/>
             <Route path="/JoinGameUsingID" element={<JoinGameUsingId/>}/>
             <Route path="/ledger" element={<Ledger/>}/>
+            
+
+
         </Routes>
     </BrowserRouter>;
 }

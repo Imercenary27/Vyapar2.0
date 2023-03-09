@@ -20,7 +20,7 @@
 .die{
     font-size: 5em;
     padding: 0.25em;
-    color: green;
+    color: rgb(5, 85, 108);
 }
 .shaking{
     animation: wobble;
@@ -55,9 +55,9 @@
     flex-flow: column nowrap;
     height: 200px;
     width: 200px;
-    position: relative;
-    top: 150px;
-    left: 40px;
+    position: fixed;
+    top: 300px;
+    right: 40px;
 }
 .rolldice-container{
     display:flex;

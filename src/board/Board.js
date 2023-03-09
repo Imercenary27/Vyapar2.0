@@ -31,7 +31,7 @@ export default function Board(props) {
       console.log(filteredPlayerArray);
       return <>
       {
-        filteredPlayerArray.map(player =><div key={player.playSequence}>{player.userId}</div>)
+        filteredPlayerArray.map(player =><div key={player.playSequence}>{player.playSequence}</div>)
       }</>
     }
 
@@ -507,9 +507,61 @@ export default function Board(props) {
               <div className="Playerstext">{givingPlayer(players,"LOC-36")}</div>
             </div>
           </div>
-
-
+         
+          <div className="chance">
+            <h3>CHANCE </h3>
+            <h7>When you arrive on the site of Chance by odd number
+             (Such as 3,5,7) you are entitled to receive From Bank as follows:</h7><br/>
+            
+             3-Lottery Prize 2500 Mudra<br/>
+             5-You have won crossword competition prize<br/>
+             7-You have won Jack Pot of 2000 Mudra<br/>
+             9-Go Back to Mumbai. If you have to pass starting ......<br/>
+             Collect 1500 Mudra and got Darjeeling.<br/>
+             11-Prize for Best performing in Export, 3000 Mudra
+           
+          </div>
+          <div className="chance1">
+            <h3>COMMUNITY CHEST </h3>
+            <p>When you arrive on the site of Community Chest, by even number
+             (Such as 2,4,6,) you are entitled to receive From Bank as follows:<br/>
+             2-It is your Birthday collect from each player, 500 Mudra<br/>
+             4-1st Prize in beauty contest, 2000 Mudra<br/>
+             6-Income tax refund 2000 Mudra<br/>
+             8-Go to rest House, you can not play next turn.<br/>
+             10-Receive the interest on shares, 1500 Mudra<br/>
+             12-..... of stocks collect, 3000 Mudra<br/>
+            </p>
+          </div>
+          <div className="chance2">
+          <h3>COMMUNITY CHEST </h3>
+            <p>When you arrive on the site of Community Chest, by even number
+             (Such as 2,4,6,) you are entitled to receive From Bank as follows:<br/>
+             2-It is your Birthday collect from each player, 500 Mudra<br/>
+             4-1st Prize in beauty contest, 2000 Mudra<br/>
+             6-Income tax refund 2000 Mudra<br/>
+             8-Go to rest House, you can not play next turn.<br/>
+             10-Receive the interest on shares, 1500 Mudra<br/>
+             12-..... of stocks collect, 3000 Mudra<br/>
+            </p>
+          </div>
+          <div className="chance3"><h1>CHANCE</h1>
+            <p>When you arrive on the site of Chance by even number
+             (Such as 2,4,6,) you are entitled to receive From Bank as follows:<br/>
+             3-Lottery Prize 2500 Mudra<br/>
+             5-You have won crossword competition prize <br/>
+             7-You have won Jack Pot of 2000 Mudra<br/>
+             9-Go Back to Mumbai. If you have to pass starting ......<br/>
+             Collect 1500 Mudra and got Darjeeling.<br/>
+             11-Prize for Best performing in Export, 3000 Mudra<br/>
+            </p></div>
+         <div className="heading"><h1></h1></div>
         </div>
+
+
+    
+
+
 
       );
 

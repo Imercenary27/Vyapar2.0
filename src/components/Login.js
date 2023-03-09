@@ -6,7 +6,6 @@ import { Wave, Random } from "react-animated-text";
 import { useNavigate } from 'react-router-dom';
 
 import NavbarBef from '../NavbarBef';
-var loggedIn=false
 
 
 export const Login = () => {
@@ -45,8 +44,8 @@ export const Login = () => {
     setStatus(status);
     localStorage.setItem('user',assetId);
     localStorage.setItem('x-access-token',(response.data.data.token));
-    loggedIn=true
-    console.log(loggedIn)
+
+ 
  
     navigate('/gamelist');
    
@@ -59,12 +58,7 @@ export const Login = () => {
   
 }
 
-console.log(loggedIn)
-if (loggedIn) {
 
-  return <Navigate to="/gamelist"/>;
-
-}
    
     if (isLoading) {
       return <div className="App">Loading...</div>;
@@ -95,7 +89,7 @@ if (loggedIn) {
                 <label htmlFor="floatingPassword">Password</label>
             </div>
 
-            <button className="w-100 btn btn-lg btn-primary" type="submit">Sign in</button>
+            <button className="w-100 btn btn-lg btn-primary" type="submit" style={{backgroundColor:"#0B3ED9"}}>Sign in</button>
 
             <div id="scroll-container">
                <div id="scroll-text">Contact Administrator Dummy Line Here. Lets play Monopoly.Contact for Advertisement</div>

@@ -417,4 +417,25 @@ background: radial-gradient(circle, rgba(101,60,198,1) 25%, rgba(247,77,77,1) 10
 .dashbar{
   position:absolute;
   right:0px;
+  background-color: #927ac9;
+  box-shadow: var(--outer-shadow);
+}
+
+.listtable{
+  position:fixed !important;
+  right: 40px !important;
+  top:100px;
+  overflow-y: scroll;
+  height: 150px;
+  
+  background-color:#847a82
+}
+
+.mb-286{
+  position: fixed;
+  right: 150px;
+  top: 50px;
+}
+.declarewin{
+  font-size: 100px;
 }

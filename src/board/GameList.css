@@ -2,6 +2,8 @@
     display: flex;
     font-size: 20px;
     font-family: Georgia, 'Times New Roman', Times, serif;
+    overflow-y: scroll;
+    max-height: 90vh;
 }
 
 .gamelist button{
@@ -24,18 +26,27 @@
     flex: 1;
     margin: 30px;
     background-color: #addcd9;
+    overflow-y: scroll;
+    max-height: 90vh;
 }
 
 .child:first-child{
     margin-right: 20px;
+    overflow-y: scroll;
+    max-height: 90vh;
 }
 
 .child:second-child{
     margin-right: 20px;
+    overflow-y: scroll;
+    max-height: 90vh;
 }
 
 .child:third-child{
     margin-right: 20px;
+    overflow-y: scroll;
+    max-height: 90vh;
+  
 }
 .note{
     text-align: center;
@@ -47,6 +58,7 @@
     justify-items: center;
     position: relative;
     left: 650px;
+    width: 200px;
 }
 .joingame-button{
     font-size:20px;

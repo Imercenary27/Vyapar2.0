@@ -1,14 +1,15 @@
 import axios from "axios";
-import {Navigate} from "react-router-dom";
+import {useNavigate} from "react-router-dom";
 import {useState} from "react";
 import React from 'react';
 
 
 
 export const JoinGameUsingId = () => {
-    
+   
+    const navigate = useNavigate();
    const [isLoading,setLoading]=useState(false);
-    const [navigate, setNavigate] = useState(false);
+    //const [navigate, setNavigate] = useState(false);
 
     const data = ({
         "gameId":localStorage.getItem('gameId'),
@@ -19,30 +20,31 @@ export const JoinGameUsingId = () => {
         method: 'post',
         url: '/api/vyapar/joingame/',
         headers: { 
-        'x-access-token': localStorage.getItem('x-access-token')   }, data : data
+        'x-access-token': localStorage.getItem('x-access-token')   },
+         data : data
       };
       
       const submit = async e =>{
-        console.log('submit called')
-       axios(config)
+        e.preventDefault();
+      axios(config)
         .then((response)=>{
-          setLoading(true);
+          if(response.data.status === "Success"){
+            console.log((response.data));
+            navigate('/game-board');
+            
+          }
+          if (response.data.Status==="Error"){
+            window.confirm(response.data.data.errorMessage);
+          }
+            
          // const allPlayers = response.data.data.game.players;
-         console.log((response.data));
-         
-          setLoading(false);
-          
-          
+       
+     
         })
-        setNavigate(true);
+       
     }
-   if (navigate) {
-        return <Navigate to="/game-board"/>;
-    }
-    if (isLoading) {
-      return <div className="App">Loading...</div>;
-    }
-
+  
+   
       
       
       

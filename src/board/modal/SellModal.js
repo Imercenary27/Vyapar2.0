@@ -9,24 +9,10 @@ import Container from "react-bootstrap/Container";
 import { useEffect, useState } from "react";
 
 
-
-
-function PurchaseModal(props) {
-  console.log(props);
-  const {locations}=props;
-  const {players}=props;
-  const[curr,setCurr]=useState("");
-  const[purchaseconf,setPurchase]=useState();
-  console.log(props.players)
-  console.log(locations)
-  const locationlive=players.filter((game) => game.userId===localStorage.getItem('user'))
-  console.log(locationlive)
-  const purchaseid= locationlive[0].currentPlace
+function SellModal() {
   
-  console.log(purchaseid)
-  const walletbal=locationlive[0].walletBalance
 
-  
+ 
 
  
   
@@ -34,12 +20,13 @@ function PurchaseModal(props) {
   const data = ({
    
     "gameId":localStorage.getItem("gameId"),
-    "locationAssetId": locationlive[0].currentPlace,
-    "User ":localStorage.getItem("user")
+    "locationId": localStorage.getItem("purchaseId"),
+    "buyerId ":localStorage.getItem("user"),
+    "transactionCost":localStorage.getItem("transactionCost")
   });
   const config = {
     method: 'post',
-    url: '/api/vyapar/purchaselocation/',
+    url: '/api/vyapar/selllocation/',
     headers: {
       'x-access-token': localStorage.getItem('x-access-token')
     },
@@ -52,14 +39,7 @@ function PurchaseModal(props) {
   .then((response)=>{
     if(response.data.status === "Success"){
       console.log((response.data));
-  const Purchase=(response.data.data.transactionMessage)
-  const allLocations = response.data.data.game.locations
-  const allPlayers = response.data.data.game.players
-
-  setPurchase(Purchase)
-  window.confirm(Purchase)
-  props.onHandlePurchaseModalClick(allLocations,allPlayers);
-    }
+      }
     if(response.data.status === "Error"){
       window.confirm(response.data.data.errorMessage)
     }
@@ -70,15 +50,14 @@ function PurchaseModal(props) {
   
   return (
     <Modal
-      {...props}
+  
       dialogClassName="modal-100w"
       aria-labelledby="contained-modal-title-vcenter"
       centered
-      backdrop="static"
     >
-      <Modal.Header closeButton style={{backgroundColor:"green"}}>
-        <Modal.Title id="contained-modal-title-vcenter" >
-          Confirm your location purchase:{purchaseid}
+      <Modal.Header closeButton>
+        <Modal.Title id="contained-modal-title-vcenter">
+          Confirm your location purchase:
         </Modal.Title>
       </Modal.Header>
       <Modal.Body className="show-grid">
@@ -87,9 +66,8 @@ function PurchaseModal(props) {
             <Col xs={6} md={6}>
               Player : {localStorage.getItem("user")}
               <br />
-              Wallet Balance:{walletbal}<br />
               
-              Place for Purchase:{purchaseid}
+              Place for Purchase:
             </Col>
             
                <Col xs={2} md={3}>
@@ -104,11 +82,11 @@ function PurchaseModal(props) {
         <Button onClick={() => {
         submit();
           
-          props.onHide();
+         
         }}>Purchase</Button>
-        <Button onClick={props.onHide}>Cancel</Button>
+        <Button >Cancel</Button>
       </Modal.Footer>
     </Modal>
   );
 }
-export default PurchaseModal;
+export default SellModal;

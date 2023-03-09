@@ -21,6 +21,9 @@ function  Gamelist() {
   useEffect(() => {
     
     callGetAllGamesApi();
+    if(localStorage.getItem("user")===null){
+      navigate("/login")
+    }
     
   },[]);
   const token = localStorage.getItem("x-access-token");
@@ -42,6 +45,7 @@ function  Gamelist() {
     gameId: "136202212448",
     User: "lahu@nic.in",
   });
+
 
   const configForJoinGame = {
     method: "post",
@@ -195,6 +199,7 @@ function  Gamelist() {
     */
   };
 
+
   //end games button click
   const egGameClick = async (gameId) => {
     console.log(gameId);
@@ -203,6 +208,7 @@ function  Gamelist() {
   };
   const callGetAllGamesApi = async (e) => {
     axios(config).then((response) => {
+      if(response.data.status==="Success"){
       console.log(JSON.stringify(response.data.data));
       
       const allGames = response.data.data;
@@ -248,7 +254,10 @@ function  Gamelist() {
     console.log(
       "Ended Games Where User Was There",
       endedGamesWhereUserWasThere
-    );
+    );}
+    if(response.data.status==="Error"){
+      navigate('/whattodo')
+    }
   });
   };
 
